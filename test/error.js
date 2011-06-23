@@ -2,7 +2,7 @@ var helper = require(__dirname);
 
 test('an error test', function(t) {
   var childRan = false;
-  var errTest = new test('error test', {
+  var errTest = new test.Unit('error test', {
     fn: function(t) {
       t.test('some child', function(t) {
         childRan = true;

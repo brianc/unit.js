@@ -1,7 +1,7 @@
 var helper = require(__dirname);
 
 test('hierarchy status - child passes', function(t) {
-  var fake = new test('fake test', {
+  var fake = new test.Unit('fake test', {
     fn: function(t) {
       setTimeout(function() {
         t.test('child 1', function(t) {

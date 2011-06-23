@@ -1,7 +1,7 @@
 var helper = require(__dirname);
 
 test('a failing test', function(t) {
-  var failingTest = new test('failing test', {
+  var failingTest = new test.Unit('failing test', {
     fn: function(t) {
       t.equal(1, 2);
       t.strictEqual(true, 1);
@@ -30,7 +30,5 @@ test('a failing test', function(t) {
   failingTest.run(function() {
     t.done();
   })
-
-
 
 })

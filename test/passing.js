@@ -2,7 +2,7 @@ var helper = require(__dirname);
 
 test('a passing test', function(t) {
   //run test
-  var passingtest = new test('passing test', {
+  var passingtest = new test.Unit('passing test', {
     fn: function(t) {
       t.ok(true);
       t.equal(1, 1);
@@ -11,10 +11,6 @@ test('a passing test', function(t) {
     },
     context: helper.context
   })
-
-  passingtest.run(function() {
-    t.done();
-  });
 
   t.test('has "pass" status', function(t) {
     t.equal(passingtest.getStatus(), "pass");
@@ -30,4 +26,9 @@ test('a passing test', function(t) {
     t.equal(passingtest.failures.length, 0);
     t.done();
   })
+
+  passingtest.run(function() {
+    t.done();
+  });
+
 })

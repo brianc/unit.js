@@ -1,7 +1,7 @@
 var helper = require(__dirname);
 
 test('hierarchy status - child fails', function(t) {
-  var subject = new test('fake', {
+  var subject = new test.Unit('fake', {
     fn: function(scope) {
       setTimeout(function() {
         scope.test('failing child', function(scope) {
